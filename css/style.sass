@@ -1,0 +1,719 @@
+@import "reset.css"
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400700&family=PT+Sans:ital,wght@0,4000,7001,4001,700&display=swap')
+
+
+.wrapper
+  width: 941px
+  margin: auto
+.btn
+  display: inline-block
+  padding: 10px 34px
+  text-transform: uppercase
+  font-family: "PT Sans Narrow"
+  font-weight: bold
+  color: white
+  background: black
+  cursor: pointer
+  transition: .3s
+  &:hover
+    background: #663d15
+  &:focus
+    background: black
+
+
+.title
+  font-size: 30px
+  text-transform: uppercase
+  color: black
+
+
+body
+  font-family: "PT Sans Narrow"
+  font-weight: 700
+  font-size: 14px
+  text-transform: uppercase
+  line-height: 24px
+
+//Шапка
+.header
+  background: black
+  &-menu
+    display: flex
+    justify-content: space-between
+    &-navigation
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      width: 60%
+      img
+        margin-right: 30px
+      &__a
+        flex-grow: 1
+        padding: 25px 0
+        text-transform: uppercase
+        color: white
+        font-size: 16px
+        text-align: center
+        cursor: pointer
+        transition: .3s
+        &:hover
+          background: #242424
+
+      .active
+        position: relative
+        &::before
+          position: absolute
+          content: ""
+          top: 93%
+          left: 16%
+          width: 67.5%
+          height: 4px
+          color: white
+          background: white
+
+
+    &-enter
+      display: flex
+      position: relative
+      transition: .3s
+      &:hover
+        .header-menu-enter__icon
+          fill: white
+
+      &:hover,
+      &:active
+        background: #242424
+
+      &__icon
+        position: absolute
+        top: 28px
+        left: 24px
+        fill: #4d4d4d
+        transition: .2s
+        width: 20px
+        height: 40px
+
+
+
+
+
+      &__a
+        color: white
+        display: flex
+        font-size: 16px
+        padding: 25px 20px 25px 50px
+        cursor: pointer
+
+
+//Главный файл
+main
+  position: relative
+  background: url("../img/back.png") no-repeat center center
+  background-size: cover
+  cursor: default
+.background-gradient
+  background: linear-gradient(0deg, rgba(0,0,0,1) 40%, rgba(222,157,18,0) 100%)
+  padding-bottom: 68px
+
+
+  .logo
+    display: flex
+    &-main
+      width: 367px
+      margin: 75px auto 65px auto
+  .advantages-blocks,
+  .about,
+  .information
+    z-index: 10
+
+  .advantages-blocks
+    display: flex
+    flex-direction: row
+    color: white
+    text-align: center
+    &-block
+      max-width: 30%
+      display: flex
+      flex-direction: column
+      margin-right: 6%
+      margin-bottom: 85px
+      &:last-child
+        margin-right: 0
+      &__title
+        font-size: 30px
+
+      &-icon
+        margin: 14px 0 34px
+        &__romb
+          width: 25px
+          height: 25px
+          background: white
+          transform: rotate(45deg)
+          margin: auto
+      &__subtitle
+        line-height: 24px
+
+  .about
+    display: flex
+    background: #f9f6f3
+    padding: 55px 0 50px
+    &-news
+      max-width: 38%
+      margin: 0 44px 0 80px
+      &__title
+        margin-bottom: 37px
+      &-block
+        margin-bottom: 20px
+        &__subtitle
+          color: black
+          margin-top: 14px
+        &__date
+          color: black
+
+      &-a
+        margin-top: 33px
+        &__button
+
+    &-photo
+      margin-left: 70px
+      &__title
+        margin-bottom: 37px
+      &-slider
+        border: 7px solid white
+        margin-bottom: 40px
+        overflow: hidden
+        transition: .3s
+        width: 287px
+        height: 165px
+
+        &-track
+          display: flex
+          transition: .2s
+
+        &__img
+          background-position: 50% 50%
+          background-repeat: no-repeat
+          background-size: cover
+
+
+      &-buttons
+        display: flex
+        justify-content: space-between
+
+        &__btn-next,
+        &__btn-prev
+          padding: 10px 50px
+  .information
+    cursor: default
+    display: flex
+    justify-content: space-between
+    margin: 40px auto 0 auto
+    padding: 55px 80px 50px
+    background: #f7f4f1
+    box-sizing: border-box
+    .title
+      margin-bottom: 35px
+    &-contacts
+      &__title
+      &__address
+        margin-bottom: 30px
+        a
+          color: black
+
+      &__timeworks
+        margin-bottom: 30px
+      &-buttons
+        &__a
+          padding: 10px 24px
+
+          &:first-child
+            margin-right: 20px
+    &-record
+      max-width: 300px
+
+      &-form
+        display: flex
+        flex-wrap: wrap
+        div:nth-child(odd)
+          margin-right: 20px
+        input
+          font: 700 14px "PT Sans Narrow"
+          max-width: 120px
+          border: 2px solid black
+          padding: 14px 0 14px 16px
+          outline: none
+          &:focus
+            border: 2px solid #663d15
+          &::placeholder
+            font: bold 14px "PT Sans Narrow"
+        p
+          margin: 13px 0 0 17px
+        &__button
+          font: bold 14px "PT Sans Narrow"
+          outline: none
+          margin-top: 20px
+          width: 100%
+          padding: 15px 0
+          border: none
+
+
+//Подвал
+
+.footer
+  background: url("../img/backg-footer.png")
+  padding: 65px 0 45px 0
+  .wrapper
+    display: flex
+
+  &-information
+    max-width: 315px
+    p
+      color: white
+    span
+      text-decoration-line: underline
+  &-networks
+    margin-left: 90px
+    width: 140px
+    &__title
+      text-align: center
+      color: white
+    &-icons
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+
+      &__icon
+        cursor: pointer
+        width: 43px
+        height: 43px
+        background: black
+        display: flex
+        fill: white
+        justify-content: center
+        align-items: center
+        margin: 15px 0 10px 0
+        transition: all.3s
+        &:hover
+          background: white
+          svg
+            fill: black
+            transition: all.3s
+
+        svg
+          max-height: 22px
+
+
+.main-price
+  background: url("../img/background-store.jpg") 50% 50% repeat
+
+  padding: 75px 0 80px 0
+
+//Навигация по странице
+
+.navigation
+  margin-bottom: 70px
+  &-name
+    font-size: 30px
+    margin-bottom:  25px
+  &-links
+    display: flex
+    a,
+    p
+      color: black
+      display: inline-block
+    a
+      position: relative
+      margin-right: 40px
+      &:after
+        position: absolute
+        width: 10px
+        height: 10px
+        content: ""
+        top: 7px
+        right: -23px
+        background: black
+        transform: rotate(45deg)
+    p
+      color: #aba9a7
+      cursor: context-menu
+//Главный заголовок на странице Прайс
+.main-title
+  position: relative
+  font-size: 48px
+  line-height: 48px
+  text-align: center
+  margin-bottom: 75px
+  &:after,
+  &:before
+    position: absolute
+    content: ""
+    width: 160px
+    height: 2px
+    background: black
+  &:before
+    top: 23px
+    left: -5px
+  &:after
+    top: 26px
+    right: 5px
+
+//Описание продукции используемой на предприятии и стоимсоть работ
+.about
+  margin-bottom: 70px
+  display: flex
+  &-products
+    width: 240px
+    &__title
+      margin-bottom: 38px
+    &-name
+      li
+        margin-top: 14px
+        position: relative
+        margin-left: 20px
+        &:before
+          position: absolute
+          width: 8px
+          height: 8px
+          content: ""
+          top: 8px
+          left: -14px
+          background: black
+          transform: rotate(45deg)
+  &-price
+    margin-left: 193px
+    &__table
+      margin-top: 40px
+      &_name
+        padding: 7px 110px 7px 17px
+
+      &_cost
+        width: 225px
+        text-align: center
+      td
+        border: 2px solid black
+
+.about-us
+  display: flex
+  &-block1,
+  &-block2
+    max-width: 380px
+  &-block1
+    margin-right: 100px
+    &__title
+      margin-bottom: 40px
+  &-block2
+    margin-top: 60px
+
+
+
+//Блок продукици и фильтра
+.main-price
+  background: #fcf9f6
+  &-box
+    display: flex
+    &-filter
+      min-width: 168px
+      margin-bottom: 68px
+      &__title
+        font-size: 24px
+        margin-bottom: 28px
+      &-category
+        &__button
+          padding: 12px 24px
+        .table
+          display: grid
+          grid-template-columns: 0.1fr 1fr
+          grid-gap: 7px 13px
+          margin-bottom: 50px
+          input
+            display: none
+          span
+            display: inline-block
+            width: 15px
+            height: 15px
+            border: 2px solid black
+            border-radius: 50%
+            position: relative
+            &::before
+              position: absolute
+              top: 50%
+              left: 50%
+              transform: translate(-50%,-50%) rotate(45deg)
+              content: ""
+              width: 8px
+              height: 8px
+              border-radius: 50%
+              background: black
+              transition: .2s
+              opacity: 0
+          input:checked +span::before
+            opacity: 1
+
+
+      &-manufacturers
+
+        li
+          margin-bottom: 6px
+          vertical-align: middle
+          &:last-child
+            margin-bottom: 60px
+          p
+            display: inline-block
+            align-items: center
+            text-align: center
+            box-sizing: border-box
+            line-height: 20px
+          input
+            display: none
+          span
+            display: inline-block
+            width: 16px
+            height: 16px
+            margin-right: 22px
+            border: 2px solid black
+            background: transparent
+            position: relative
+            &::before,
+            &::after
+              position: absolute
+              top: 50%
+              left: 50%
+              transform: translate(-50%,-50%) rotate(45deg)
+              content: ""
+              width: 14px
+              height: 3px
+              background: black
+              opacity: 0
+              transition: .2s
+
+            &::after
+              transform: translate(-50%,-50%) rotate(-45deg)
+        input:checked + span::before,
+        input:checked + span::after
+          opacity: 1
+        p
+          font-size: 14px
+    &-products
+      margin-left: 70px
+      display: grid
+      grid-gap: 20px
+      grid-template-columns: 220px 220px 220px
+      &-block
+        -webkit-box-shadow: 0 0 6px 0  rgba(0,0,0,.35)
+        box-shadow: 0 0 20px -12px rgba(0,0,0,.35)
+        background: white
+        transition: all .2s
+        cursor: pointer
+        &:hover
+          box-shadow: 0 0 37px -12px rgba(0,0,0,.35)
+        &__img
+          img
+            height: 170px
+            width: 220px
+
+
+        &__title,
+        &__subtitle
+          margin-left: 15px
+          color: black
+        &-price
+          display: flex
+          box-sizing: border-box
+          padding: 9px 16px 16px 16px
+          &__cost
+            text-align: center
+            background: #e5e5e5
+            color: black
+            padding:  8px 0 9px 0
+            width: 60%
+          &__btn
+            width: 40%
+            padding: 0
+            font: bold 14px "PT Sans Narrow"
+
+//Постраничная навигация по продукции
+.main-price-navigation-products
+  margin-left: 250px
+  display: flex
+  .active
+    background: white
+    color: black
+  &-page
+    width: 43px
+    padding: 9px 0
+    display: inline-block
+    margin-right: 7px
+    text-align: center
+    background: black
+    transition: all .3s
+    cursor: pointer
+    &:hover
+      background: #663d15
+
+//модальное окно
+.popup
+    position: fixed
+    width: 100%
+    height: 100%
+    background: rgba(0, 0, 0, .8)
+    top: 0
+    left: 0
+    opacity: 0
+    visibility: hidden
+    overflow-y: auto
+    overflow-x: hidden
+    transition: all 0.8s ease 0s
+    &-form
+      width: 100%
+      &-block
+        display: flex
+        flex-direction: column
+        box-sizing: border-box
+        textarea
+          width: 100%
+          min-height: 200px
+          resize: vertical
+          font: bold 16px "PT Sans Narrow"
+        input
+          width: 100%
+          height: 30px
+          font: bold 18px "PT Sans Narrow"
+          &:last-child
+            height: 40px
+            margin-top: 20px
+
+
+    &__body
+      min-height: 100%
+      display: flex
+      align-items: center
+      justify-content: center
+      padding: 30px 10px
+
+    &__content
+      min-width: 40%
+      background-color: white
+      color: black
+      padding: 30px
+      position: relative
+      transition: all 0.8s ease 0s
+      opacity: 0
+      transform: perspective(600px)  translate(0,-100%)rotateX(45deg)
+    &__close
+      position: absolute
+      top: 10px
+      right: 10px
+      font-size: 20px
+      text-decoration: none
+      color: red
+    &__title
+      font-size: 40px
+      margin: 0 0 1em 0
+    &__area
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+    &:target
+      opacity: 1
+      visibility: visible
+    &:target .popup__content
+      transform: perspective(0px) translate(0px, 0%) rotateX(0deg)
+      opacity: 1
+
+#popup-fixed-window
+  position: fixed
+  top: 10px
+  left: 10px
+  opacity: 0
+  visibility: hidden
+
+//стили для карты
+#map
+  height: 100%
+  width: 150px
+
+
+// Страница товара
+.product-page
+  background: #fcf9f6
+  padding-bottom: 30px
+  .navigation
+    padding-top: 57px
+
+
+  &-block
+    display: flex
+    &-images
+      margin-right: 90px
+      &-main__img
+        cursor: pointer
+        &:hover
+          box-shadow: 0 0 37px -12px rgba(0,0,0,.35)
+        img
+          width: 460px
+          height: 500px
+
+      &-sub
+        display: grid
+        grid-template-columns:  140px 140px 140px
+        grid-gap: 20px
+        &__img
+          cursor: pointer
+          &:hover
+            box-shadow: 0 0 37px -12px rgba(0,0,0,.35)
+        img
+          border: none
+          height: 150px
+          width: 140px
+
+    &-text
+      max-width: 380px
+      margin-top: 34px
+      &__subtitle
+        display: flex
+        justify-content: space-between
+
+        p
+          min-width: 90px
+          margin-right: 10px
+        span
+          color: #aeaeae
+          min-width: 112px
+          margin-left: 10px
+
+      &__p
+        margin-top: 40px
+
+      &-price
+        margin-top: 40px
+        display: flex
+        &__cost
+          text-align: center
+          background: #e5e5e5
+          color: black
+          padding: 8px 33px 9px 33px
+
+      &-set
+        margin-top: 60px
+
+        &__title
+          text-transform: uppercase
+          font-size: 24px
+          margin-bottom: 40px
+        &__name
+          p
+            margin-left: 21px
+            position: relative
+            &::before
+              position: absolute
+              width: 10px
+              height: 10px
+              content: ""
+              top: 7px
+              left: -21px
+              background: black
+              transform: rotate(45deg)
+
+
